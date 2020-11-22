@@ -185,3 +185,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 .borderblack{
     border-color: black!important;
 }
+
+.playerWidth{
+    width: 100%;
+}
+
+.icon-space{
+  display: flex;
+  justify-content: right;
+  padding: initial;
+}
+
+.forward-icon{
+  padding-right: 75%;
+}
