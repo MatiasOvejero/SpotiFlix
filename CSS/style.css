@@ -199,3 +199,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 .forward-icon{
   padding-right: 75%;
 }
+
+/*favorites sidebar*/
+#favorites{
+  color: #e50914;
+  background-color: rgb(29, 27, 23);
+  width: 20%;
+  padding-bottom: 51%;
+}
+
+#favorites li{
+  display: flex;
+  text-align: ;
+}
