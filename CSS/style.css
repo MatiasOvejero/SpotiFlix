@@ -106,6 +106,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 .icon-play:before {
   content: "\e616";
+  padding-right: 1em;
 }
 .icon-stop:before {
   content: "\e617";
@@ -194,6 +195,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   display: flex;
   justify-content: right;
   padding: initial;
+  margin-left: 20%;
 }
 
 .forward-icon{
@@ -209,6 +211,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 
 #favorites li{
-  display: flex;
-  text-align: ;
+  display: block;
+}
+
+.hide{
+  visibility: hidden;
 }
