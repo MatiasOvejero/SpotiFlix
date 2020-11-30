@@ -29,3 +29,5 @@ $(function () {
     $(".progress").css("width", (aud.currentTime / aud.duration) * 100 + "%");
   };
 });
+
+console.log(globalSpotify);
