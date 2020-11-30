@@ -20,7 +20,7 @@
       rel="stylesheet"
       type="text/css"
     />
-    
+
     <script
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
       type="text/javascript"
@@ -29,7 +29,10 @@
   </head>
   <body>
     <!--Navigation Bar-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black!important;">
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light"
+      style="background-color: black !important;"
+    >
       <a class="navbar-brand netflixcolor" href="#">SPOTIFLIX</a>
       <button
         class="navbar-toggler"
@@ -43,7 +46,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse netflixcolor" id="navbarSupportedContent">
+      <div
+        class="collapse navbar-collapse netflixcolor"
+        id="navbarSupportedContent"
+      >
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link netflixcolor" href="#"
@@ -52,7 +58,7 @@
           </li>
 
           <li class="nav-item">
-            <a class= "nav-link netflixcolor" href="#">FAVORITOS</a>
+            <a id="favbuton" class="nav-link netflixcolor" href="#">FAVORITOS</a>
           </li>
 
           <li class="nav-item dropdown netflixcolor">
@@ -67,7 +73,10 @@
             >
               Menu
             </a>
-            <div class="dropdown-menu netflixcolor" aria-labelledby="navbarDropdown">
+            <div
+              class="dropdown-menu netflixcolor"
+              aria-labelledby="navbarDropdown"
+            >
               <a class="dropdown-item netflixcolor" href="#">Action</a>
               <a class="dropdown-item netflixcolor" href="#">Another action</a>
               <div class="dropdown-divider netflixcolor"></div>
@@ -93,7 +102,10 @@
             aria-label="Search"
             style="border-color: white;"
           />
-          <button class="btn btn-outline-success netflixcolor borderblack my-2 my-sm-0" type="submit">
+          <button
+            class="btn btn-outline-success netflixcolor borderblack my-2 my-sm-0"
+            type="submit"
+          >
             Buscar
           </button>
         </form>
@@ -101,20 +113,92 @@
     </nav>
     <!--End of Navigation Bar-->
     <!--Content-->
-  <div id="grid-container">
-    <sidebar id="sidebar">
-      <ul id="favorites" class=""> <!--VOLVER A PONERLE HIDE A ESTA CLASE-->
-        <li>FAVORITOS</li>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </sidebar>
+    <div id="grid-container">
+      <sidebar id="sidebar" class="hide">
+        <ul id="favorites" class="fav-elements">
+          <!--VOlVER A PONERLE HIDE A ESTA CLASE-->
+          <li>FAVORITOS</li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </sidebar>
 
-    <section id="section">
-      
-    </section>
-  </div>
+      <section id="section" class="section-style">
+        <!--Vista principal con carousel de tarjetas en las que iria la imagen que me de la api y el boton play-->
+        <div
+          id="carouselExampleControls"
+          class="carousel slide carousel-position"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+
+            <div class="carousel-item active carousel-item-position">
+              <div class="card card-position" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card card-position" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="card card-position" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </section>
+    </div>
     <!--End of Content-->
     <!-- Audio Player -->
 
@@ -130,12 +214,14 @@
         <div class="singer">John Legend</div>
       </div>
 
-      <div class="btns icon-space
-      icon-space" style="padding-right: 49%;">
-        <div class="iconfont play-pause icon-play "></div> 
-        <div class="iconfont next icon-next "></div>
+      <div class="btns icon-space icon-space" style="padding-right: 49%;">
+        <div class="iconfont play-pause icon-play"></div>
+        <div class="iconfont next icon-next"></div>
       </div>
-      <div class="progress playerWidth" style="background-color: white !important;"></div>
+      <div
+        class="progress playerWidth"
+        style="background-color: white !important;"
+      ></div>
     </div>
 
     <!--End of Audio Player-->
@@ -152,6 +238,9 @@
     <script src="../JS/app.js"></script>
     <script src="../JS/audio.js"></script>
     <script src="../JS/favorites.js"></script>
-    <script src="https://kit.fontawesome.com/7a05e680ad.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/7a05e680ad.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

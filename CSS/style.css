@@ -213,6 +213,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 
 #favorites li{
   display: block;
+  list-style-type: circle;
+  font-size: larger;
 }
 
 .hide{
@@ -227,15 +229,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   height: 600px;
 }
 
+.carousel-position{
+  padding-top: 50%;
+}
+
+.carousel-item-position{
+  padding-bottom: 30%;
+}
+
+.card-position{
+  margin-left: 35%;
+  margin-top: 30%;
+}
+
 #sidebar {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 }
 
-#section { 
+.section-style { 
   background-color: rgb(255, 255, 158);
   padding-left: 30%;
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
 }
+
+
