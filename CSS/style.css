@@ -61,6 +61,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   src: url("//static0.qianqian.com/web/st/font/iconfont-4e6.woff")
     format("woff");
 }
+
 .iconfont {
   font-family: iconfont !important;
   font-size: 16px;
@@ -68,6 +69,37 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#buttonContainer{
+  display: flex;
+}
+
+
+#prevButton {
+  width: 30px;
+  height: 30px;
+  padding: 0px 8px 4px 0px;
+}
+
+#favoriteButton{
+  width: 30px;
+  height: 30px;
+  padding: 0px 0px 6px 15px;
+  align-content: flex-end;
+}
+
+#favoriteOn{
+  width: 30px;
+  height: 30px;
+  padding: 0px 0px 6px 15px;
+  margin-left: -32px;
+  align-content: flex-end;
+}
+
+.fhide{
+  visibility: hidden;
+}
+
 .icon-list:before {
   content: "\e603";
 }
