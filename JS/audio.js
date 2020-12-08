@@ -30,4 +30,4 @@ $(function () {
   };
 });
 
-console.log(globalSpotify);
+//console.log(globalSpotify);
