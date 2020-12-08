@@ -30,6 +30,18 @@ $(function () {
     $(".progress").css("width", (aud.currentTime / aud.duration) * 100 + "%");
   };
 
+  /*Este codigo esta escrito en JQuery, no lo hice yo, solo lo copie y modifique algunas cosas.
+  Aca les voy a explicar mas o menos que significa cada cosa para que lo puedan leer lo mejor posible,
+  pero si tienen alguna consulta me preguntan:
+  $ => este es un getElementByClass;
+  .on => este funciona como el getElementById;
+  COMPARISION es una variable que guarda el elemento que contiene la clase fhide, que le da visibility = hidden
+  luego en el if, si comparision es true y el lenght es mayor que 0 le saca la clase fhide al elemento que la tenia.
+  sino, se la agrega. 
+  esto hace que la estrellita negra aparezca y desaparezca segun el clik*/
+
+
+
   $(".favOn-favOff").on("click", function () {
     let comparision = document.getElementsByClassName("fhide")
     if (comparision && comparision.length>0) {
