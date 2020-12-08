@@ -22,12 +22,24 @@ $(function () {
       $(".play-pause").addClass("icon-play");
     }
   });
+
   $(".next").on("click", function () {
     aud.src = "another audio source";
   });
   aud.ontimeupdate = function () {
     $(".progress").css("width", (aud.currentTime / aud.duration) * 100 + "%");
   };
+
+  $(".favOn-favOff").on("click", function () {
+    let comparision = document.getElementsByClassName("fhide")
+    if (comparision && comparision.length>0) {
+      $("#favoriteOn").removeClass("fhide");
+      //$(".favOn-favOff").addClass("icon-favoriteblack");
+    } else {
+      $("#favoriteOn").addClass("fhide");
+     
+    }
+  });
 });
 
 //console.log(globalSpotify);
