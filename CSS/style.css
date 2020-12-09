@@ -63,6 +63,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 
 .iconfont {
+  margin: 10px;
   font-family: iconfont !important;
   font-size: 16px;
   font-style: normal;
@@ -92,8 +93,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   width: 30px;
   height: 30px;
   padding: 0px 0px 6px 15px;
-  margin-left: -32px;
+  margin-left: -30px;
   align-content: flex-end;
+}
+
+.filterInvert{
+  filter: invert(100%) ;
+}
+
+#muteButton{
+  margin: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+#repeatButton{
+  width: 22px;
+  height: 21px;
+  margin: 20px;
 }
 
 .fhide{

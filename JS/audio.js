@@ -8,6 +8,8 @@ myaudio.loop = true; - This will make the audio track loop.
 myaudio.muted = true; - This will mute the track
 myaudio.addEventListener('ended',myfunc)' - Esto hará un llamado a 'myfunc()' una vez que el audio haya finalizado.
 */
+const repeatOn = document.getElementById("repeatButton");
+const mutedOn = document.getElementById("muteButton");
 
 $(function () {
   var aud = $("audio")[0];
@@ -26,15 +28,50 @@ $(function () {
   $(".next").on("click", function () {
     aud.src = "another audio source";
   });
+
+  $("#prevButton").on("click", function () {
+    aud.src = "another audio source";
+    console.log("holis");
+  });
+
+
+
   aud.ontimeupdate = function () {
     $(".progress").css("width", (aud.currentTime / aud.duration) * 100 + "%");
   };
+
+  mutedOn.addEventListener("click", function(){
+    
+    if (aud.muted === false){
+      aud.muted = true;
+      muteButton.classList.add("filterInvert");
+    }
+    else{
+      aud.muted = false;
+      muteButton.classList.remove("filterInvert");
+    }
+      
+  })
+
+  repeatOn.addEventListener("click", function(){
+    
+    if (aud.loop === false){
+      aud.loop = true;
+      repeatButton.classList.add("filterInvert");
+    }
+    else{
+      aud.loop = false;
+      repeatButton.classList.remove("filterInvert");
+    }
+      
+  })
+  
 
   /*Este codigo esta escrito en JQuery, no lo hice yo, solo lo copie y modifique algunas cosas.
   Aca les voy a explicar mas o menos que significa cada cosa para que lo puedan leer lo mejor posible,
   pero si tienen alguna consulta me preguntan:
   $ => este es un getElementByClass;
-  .on => este funciona como el getElementById;
+  .on => este funciona como el addEventListener;
   COMPARISION es una variable que guarda el elemento que contiene la clase fhide, que le da visibility = hidden
   luego en el if, si comparision es true y el lenght es mayor que 0 le saca la clase fhide al elemento que la tenia.
   sino, se la agrega. 
@@ -53,5 +90,10 @@ $(function () {
     }
   });
 });
+
+
+
+
+
 
 //console.log(globalSpotify);
