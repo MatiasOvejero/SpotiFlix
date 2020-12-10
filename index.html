@@ -1,250 +1,209 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./CSS/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css"
-    />
-    <link
-      href="http://fonts.googleapis.com/css?family=Lobster"
-      rel="stylesheet"
-      type="text/css"
-    />
 
-    <script
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-      type="text/javascript"
-    ></script>
-    <title>SpotiFlix</title>
-  </head>
-  <body>
-    <!--Navigation Bar-->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light"
-      style="background-color: black !important;"
-    >
-      <a class="navbar-brand netflixcolor" href="#">SPOTIFLIX</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./CSS/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css" />
+  <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+  <!-- link de iconos -->
+  <link href="iconos/fonts/style.css" rel="stylesheet" />
 
-      <div
-        class="collapse navbar-collapse netflixcolor"
-        id="navbarSupportedContent"
-      >
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link netflixcolor" href="#"
-              >HOME <span class="sr-only">(current)</span></a
-            >
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script>
+  <title>SpotiFlix</title>
+</head>
+
+<body>
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black !important;">
+    <a class="navbar-brand netflixcolor" href="#">SPOTIFLIX</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse netflixcolor" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link netflixcolor" href="#">HOME <span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a id="favbuton" class="nav-link netflixcolor" href="#">FAVORITOS</a>
+        </li>
+
+        <li class="nav-item dropdown netflixcolor">
+          <a class="nav-link dropdown-toggle netflixcolor" href="#" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu netflixcolor" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item netflixcolor" href="#">Action</a>
+            <a class="dropdown-item netflixcolor" href="#">Another action</a>
+            <div class="dropdown-divider netflixcolor"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+
+        <li class="nav-item netflixcolor">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 netflixcolor">
+        <input id="inputSearch" class="form-control mr-sm-2 netflixcolor" type="search"
+          placeholder="Canción, Artista..." aria-label="Search" style="border-color: white;" />
+        <button id="butonSearch" class="btn btn-outline-success netflixcolor borderblack my-2 my-sm-0" type="submit">
+          Buscar
+        </button>
+      </form>
+    </div>
+  </nav>
+  <!--End of Navigation Bar-->
+  <!--Content-->
+
+  <div id="grid-container">
+    <!-- Sidebar -->
+    <div class="wrapper netflixcolor">
+      <nav id="sidebar" class="">
+        <ul class="list-unstyled components ">
+          <li class="active">
+            <button type="button" class="btn btn-default" id="buttonuser"><a href="#homeSubmenu" data-toggle="collapse"
+                aria-expanded="false" class="dropdown-toggle "><span class="icon-user-solid-circle" id=""></span>
+                Usuario</a></button>
+
+            <ul class="collapse list-unstyled" id="homeSubmenu">
+              <li>
+                <a href="#">Cuenta</a>
+              </li>
+              <li>
+                <a href="#">Perfil</a>
+              </li>
+
+              <li>
+                <a href="#">Cerrar sesión</a>
+              </li>
+            </ul>
           </li>
 
-          <li class="nav-item">
-            <a id="favbuton" class="nav-link netflixcolor" href="#">FAVORITOS</a>
+          <li>
+            <button type="button" class="btn btn-default" id="premium"><a>Premium</a></button>
           </li>
+          <li>
+            <button type="button" class="btn btn-default"> <a href="#pageSubmenu" data-toggle="collapse"
+                aria-expanded="true" class="dropdown-toggle" id="playlist">Playlist</a></button>
+            <ul class="collapse list-unstyled" id="pageSubmenu">
+              <li>
+                <a href="#"><span class="icon-add-outline" id=""> Crear playlist</span></a>
+              </li>
+              <li>
+                <a href="#"><span class="icon-heart" id=""> Tus Me Gusta</span></a>
+              </li>
 
-          <li class="nav-item dropdown netflixcolor">
-            <a
-              class="nav-link dropdown-toggle netflixcolor"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              Menu
-            </a>
-            <div
-              class="dropdown-menu netflixcolor"
-              aria-labelledby="navbarDropdown"
-            >
-              <a class="dropdown-item netflixcolor" href="#">Action</a>
-              <a class="dropdown-item netflixcolor" href="#">Another action</a>
-              <div class="dropdown-divider netflixcolor"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+            </ul>
           </li>
+          <li>
 
-          <li class="nav-item netflixcolor">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
+            <a href="#"><span class="icon-music-playlist" id=""> Tu biblioteca</span></a>
+          </li>
+          <li>
+            <a href="#" id="instalapp"><span class="icon-download"> Instalar Aplicación</span></a>
           </li>
         </ul>
-        <div class="form-inline my-2 my-lg-0 netflixcolor">
-          <input
-            id="inputSearch"
-            class="form-control mr-sm-2 netflixcolor"
-            type="search"
-            placeholder="Canción, Artista..."
-            aria-label="Search"
-            style="border-color: white;"
-          />
-          <button
-            id="butonSearch"
-            class="btn btn-outline-success netflixcolor borderblack my-2 my-sm-0"
-            type="submit"
-          >
-            Buscar
-          </button>
-        </div>
-      </div>
-    </nav>
-    <!--End of Navigation Bar-->
-    <!--Content-->
-    <div id="grid-container">
-      <sidebar id="sidebar" class="hide">
-        <ul id="favorites" class="fav-elements">
-          <!--VOlVER A PONERLE HIDE A ESTA CLASE-->
-          <li>FAVORITOS</li>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-        </ul>
-      </sidebar>
+      </nav>
+    </div>
 
-      <section id="section" class="section-style">
-        <!--Vista principal con carousel de tarjetas en las que iria la imagen que me de la api y el boton play-->
-        <div
-          id="carouselExampleControls"
-          class="carousel slide carousel-position"
-          data-ride="carousel"
-        >
-          <div class="carousel-inner">
+    <section id="section" class="section-style">
+      <!--Vista principal con carousel de tarjetas en las que iria la imagen que me de la api y el boton play-->
+      <div id="carouselExampleControls" class="carousel slide carousel-position" data-ride="carousel">
+        <div class="carousel-inner">
 
-            <div class="carousel-item active carousel-item-position">
-              <div class="card card-position" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="card card-position" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="card card-position" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="..." />
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+          <div class="carousel-item active carousel-item-position">
+            <div class="card card-position" style="width: 18rem;">
+              <img src="..." class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make
+                  up the bulk of the card's content.
+                </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
-
-          <a
-            class="carousel-control-prev"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="prev"
-          >
-
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a
-            class="carousel-control-next"
-            href="#carouselExampleControls"
-            role="button"
-            data-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
         </div>
 
-      </section>
-    </div>
-    <!--End of Content-->
-    <!-- Audio Player -->
+        <div class="carousel-item">
+          <div class="card card-position" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make
+                up the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
 
-    <audio src="https://cdns-preview-7.dzcdn.net/stream/c-7243bf039ab415fb749980c406aafb29-4.mp3"></audio>
-
-    <div class="player fixed-bottom playerWidth" id="player">
-      <img
-        src="data:image/jpeg;base64,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"
-      />
-
-      <div class="info">
-        <div class="name">All of me</div>
-        <div class="singer">John Legend</div>
+        <div class="carousel-item">
+          <div class="card card-position" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the card title and make
+                up the bulk of the card's content.
+              </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div id="buttonContainer" class="btns icon-space icon-space" style="padding-right: 49%;">
-        <img src="..\iconfinder_btn_Prev_4698917.png" id="prevButton" class="prev icon-prev">
-        <div class="iconfont play-pause icon-play"></div>
-        <div class="iconfont next icon-next"></div>
-        <img src="..\favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite">
-        <img src="..\favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite">
-      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 
-      <div
-        class="progress playerWidth"
-        style="background-color: white !important;"
-      ></div>
-    </div>
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
+  </div>
 
-    <!--End of Audio Player-->
-    
-    <!-- getbootstrap.com -->
+  <!--End of Content-->
+  <!-- Audio Player -->
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./JS/app.js"></script>
-    <script src="./JS/audio.js"></script>
-    <script src="./JS/favorites.js"></script>
-    <script
-      src="https://kit.fontawesome.com/7a05e680ad.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <audio src="https://cdns-preview-7.dzcdn.net/stream/c-7243bf039ab415fb749980c406aafb29-4.mp3"></audio>
+
+  <div id="buttonContainer" class="btns icon-space icon-space" style="padding-right: 49%;">
+    <img src="..\iconfinder_btn_Prev_4698917.png" id="prevButton" class="prev icon-prev">
+    <div class="iconfont play-pause icon-play"></div>
+    <div class="iconfont next icon-next"></div>
+    <img src="..\favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite">
+    <img src="..\favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite">
+  </div>
+
+  <div class="progress playerWidth" style="background-color: white !important;"></div>
+  </div>
+
+  <!--End of Audio Player-->
+
+  <!-- getbootstrap.com -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script src="./JS/app.js"></script>
+  <script src="./JS/audio.js"></script>
+  <script src="./JS/favorites.js"></script>
+  <script src="https://kit.fontawesome.com/7a05e680ad.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
