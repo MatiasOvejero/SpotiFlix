@@ -1,7 +1,7 @@
 let datapi;
 const card = document.getElementById("carouselExampleControls");
 const audio = document.getElementById("audio-id");
-
+/*setTimeout es una funcion que se utiliza para declarar un tiempo de ejecucion (en este caso: 1000 milisegundos es 1 segundo)*/
 setTimeout(function () {
   datapi = globalSpotify.dataApi;
   console.log(datapi);
