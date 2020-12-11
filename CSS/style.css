@@ -71,10 +71,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   -moz-osx-font-smoothing: grayscale;
 }
 
-#buttonContainer{
+#buttonContainer {
   display: flex;
 }
-
 
 #prevButton {
   width: 30px;
@@ -82,14 +81,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   padding: 0px 8px 4px 0px;
 }
 
-#favoriteButton{
+#favoriteButton {
   width: 38px;
   height: 30px;
   padding: 0px 0px 6px 15px;
   align-content: flex-end;
 }
 
-#favoriteOn{
+#favoriteOn {
   width: 38px;
   height: 30px;
   padding: 0px 0px 6px 15px;
@@ -97,23 +96,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   align-content: flex-end;
 }
 
-.filterInvert{
-  filter: invert(100%) ;
+.filterInvert {
+  filter: invert(100%);
 }
 
-#muteButton{
+#muteButton {
   margin: 10px;
   width: 22px;
   height: 22px;
 }
 
-#repeatButton{
+#repeatButton {
   width: 22px;
   height: 21px;
   margin: 20px;
 }
 
-.fhide{
+.fhide {
   visibility: hidden;
 }
 
@@ -311,4 +310,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 .card {
   border: none;
+}
+.carousel-control-prev-icon {
+  left: inherit !important;
 }
