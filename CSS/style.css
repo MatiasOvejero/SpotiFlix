@@ -71,10 +71,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   -moz-osx-font-smoothing: grayscale;
 }
 
-#buttonContainer{
+#buttonContainer {
   display: flex;
 }
-
 
 #prevButton {
   width: 30px;
@@ -82,14 +81,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   padding: 0px 8px 4px 0px;
 }
 
-#favoriteButton{
+#favoriteButton {
   width: 38px;
   height: 30px;
   padding: 0px 0px 6px 15px;
   align-content: flex-end;
 }
 
-#favoriteOn{
+#favoriteOn {
   width: 38px;
   height: 30px;
   padding: 0px 0px 6px 15px;
@@ -97,23 +96,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   align-content: flex-end;
 }
 
-.filterInvert{
-  filter: invert(100%) ;
+.filterInvert {
+  filter: invert(100%);
 }
 
-#muteButton{
+#muteButton {
   margin: 10px;
   width: 22px;
   height: 22px;
 }
 
-#repeatButton{
+#repeatButton {
   width: 22px;
   height: 21px;
   margin: 20px;
 }
 
-.fhide{
+.fhide {
   visibility: hidden;
 }
 
@@ -227,68 +226,64 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', endColorstr='#8f0222',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 
-.netflixcolor{
-    color: #e50914!important;
-    background-color: black!important;
+.netflixcolor {
+  color: #e50914 !important;
+  background-color: black !important;
 }
 
-.borderblack{
-    border-color: black!important;
+.borderblack {
+  border-color: black !important;
 }
 
-.playerWidth{
-    width: 100%;
+.playerWidth {
+  width: 100%;
 }
 
-.icon-space{
+.icon-space {
   display: flex;
   justify-content: right;
   padding: initial;
   margin-left: 20%;
 }
 
-.forward-icon{
+.forward-icon {
   padding-right: 75%;
 }
 
 /*favorites sidebar*/
 
-#favorites{
+#favorites {
   color: #e50914;
   background-color: rgb(29, 27, 23);
   width: 80%;
   height: 100%;
 }
 
-#favorites li{
+#favorites li {
   display: block;
   list-style-type: circle;
   font-size: larger;
 }
 
-.hide{
+.hide {
   visibility: hidden;
 }
 
 /*GRID*/
-#grid-container{
-  display: grid;  
+#grid-container {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100%;
   height: 600px;
 }
 
-.carousel-position{
-  padding-top: 50%;
-}
-
-.carousel-item-position{
+.carousel-item-position {
   padding-bottom: 30%;
 }
 
-.card-position{
-  margin-left: 35%;
-  margin-top: 30%;
+.card-position {
+  margin: 2% 36%;
+  border: none !important;
 }
 
 #sidebar {
@@ -296,12 +291,26 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   grid-row: 1 / 3;
 }
 
-.section-style { 
-  background-color: rgb(255, 255, 158);
-  padding-left: 30%;
+.section-style {
+  background-color: #2a2a29;
+  /*padding-left: 30%;*/
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
 }
-
-
+#img-card,
+#img-c {
+  width: 20rem;
+  padding: 20px;
+  background-color: #565651;
+}
+.card-body {
+  background-color: #565651;
+  color: white;
+}
+.card {
+  border: none;
+}
+.carousel-control-prev-icon {
+  left: inherit !important;
+}
