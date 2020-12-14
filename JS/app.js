@@ -46,3 +46,4 @@ butonSearch.addEventListener("click", function () {
   let correctInput=input.split(" ").join("%20");
   apiSearch(correctInput)
 });
+
