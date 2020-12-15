@@ -44,5 +44,7 @@ inputSearch.addEventListener("keyup", function (event) {
 butonSearch.addEventListener("click", function () {
   const input = document.getElementById("inputSearch").value;
   let correctInput = input.split(" ").join("%20");
-  apiSearch("Luis%20Fonsi");
+  apiSearch(correctInput);
 });
+
+apiSearch("Luis%20Fonsi");
