@@ -259,7 +259,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   user-select: none;
   box-sizing: border-box;
   position: fixed;
-  width: 250px;
+  width: 20%;
   height: 100%;
   left: 0;
   background: black;
@@ -300,6 +300,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 .sidebar ul .sidebar-list-tertiary.tertiary{
   display: block;
 }
+
+.juan {
+  display: block!important;
+}
+
 
 .sidebar ul ul li{
   line-height: 42px;
@@ -448,4 +453,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 .carousel-control-prev-icon {
   left: inherit !important;
+  z-index: 999;
+}
+
+#controlIcon-container{
+  left: 20%;
 }

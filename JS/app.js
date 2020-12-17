@@ -51,6 +51,21 @@ butonSearch.addEventListener("click", function () {
 
 apiSearch("Luis%20Fonsi");
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // sidebar
 $(".sidebar-list-main").click(function () {
   $("nav ul .sidebar-list-secondary").toggleClass("secondary");
