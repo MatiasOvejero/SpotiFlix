@@ -15,7 +15,9 @@ function apiSearch(parameter) {
     .then((response) => response.json())
     .then((data) => {
       globalSpotify.dataApi = data;
-      console.log(data, "no anda");
+      let reply = document.getElementById("reply");
+      reply.innerHTML = `nombre: ${data.artist.name}`;
+      console.log(data);
     });
 }
 
@@ -48,3 +50,11 @@ butonSearch.addEventListener("click", function () {
 });
 
 apiSearch("Luis%20Fonsi");
+
+// sidebar
+$(".sidebar-list-main").click(function () {
+  $("nav ul .sidebar-list-secondary").toggleClass("secondary");
+});
+$(".sidebar-list-playlist").click(function () {
+  $("nav ul .sidebar-list-tertiary").toggleClass("tertiary");
+});
