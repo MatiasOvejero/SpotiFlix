@@ -433,10 +433,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 
 .section-style {
   background-color: #2a2a29;
-  /*padding-left: 30%;*/
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
+  height: auto;
 }
 #img-card,
 #img-c {
@@ -451,7 +451,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 .card {
   border: none;
 }
-.carousel-control-prev-icon {
+.carousel-control-prev {
   left: inherit !important;
   z-index: 999;
 }
