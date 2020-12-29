@@ -392,12 +392,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 
 /* search  */
-#reply{
-  
-}
-#reply_li{
-  display:inline;
-  padding-top:1%;
+
   
   /* border-bottom: 1px solid #bbb; */
 }
@@ -480,13 +475,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 
 .section-style {
-<<<<<<< HEAD
   background-color: #2a2a29;
-=======
-  background: linear-gradient(to bottom, #282629, #000);
-  
-  /*padding-left: 30%;*/
->>>>>>> 3d8a8cc (wip lista de contenido de la api)
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
