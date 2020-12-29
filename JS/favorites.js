@@ -15,3 +15,13 @@ marker.addEventListener("click", function () {
 
 });
 
+library.addEventListener("click", function () {
+    if (newFavorites.classList.contains('hideFav')) {
+        newFavorites.classList.remove('hideFav');
+        newFavorites.classList.add('favList');
+    } else {
+        newFavorites.classList.remove('favList');
+        newFavorites.classList.add('hideFav');
+    }
+
+});

@@ -301,7 +301,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   display: block;
 }
 
-.juan {
+.hideFav{
+  visibility: hidden;
+  display: none;
+}
+
+.favList {
+  visibility: visible;
   display: block!important;
 }
 
@@ -395,7 +401,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 
   
   /* border-bottom: 1px solid #bbb; */
-}
+
 
 #reply_li_title{
   padding-top:1%;

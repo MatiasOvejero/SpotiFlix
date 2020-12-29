@@ -4,6 +4,7 @@ let inputSearch = document.getElementById("inputSearch");
 const butonSearch = document.getElementById("butonSearch");
 const favbuton = document.getElementById("favbuton");
 const reply = document.getElementById("reply");
+let butContainer = "";
 const carouselExampleControls = document.getElementById(
   "carouselExampleControls"
 );
@@ -11,7 +12,6 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
 favbuton.addEventListener("click", function () {
-
   if (carouselExampleControls.style.display === "none") {
     carouselExampleControls.style.display === "block";
     prev.style.display === "block";
@@ -51,13 +51,30 @@ function apiSearch(parameter) {
         - Album: ${data.data[i].album.title}</h3>
         </li>
         <button id="reply_li_button" <span class="fas fa-play"></span>Reproducir</button>
-       
-        `;
+        <div id="butContainer">
+        <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000">
+        <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000>
+        </div>`;
       }
+      butContainer = document.getElementById("butContainer");
       reply.innerHTML += `</ul>`;
     });
-}
 
+} /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
+
+  /*butContainer && butContainer.addEventListener("click", function () {
+  buttonOf = document.getElementById("favoriteButton");
+  buttonOn = document.getElementById("favoriteOn");
+  
+  if (buttonOf.classList.contains("hideFav")) {
+    buttonOn.classList.remove("hideFav");
+    buttonOn.classList.add("favList");
+  } else {
+    buttonOn.classList.remove("favList");
+    buttonOn.classList.add("hideFav");
+  }
+    });
+    */
 // funcion mocky
 
 // function apiSearch(parameter) {
