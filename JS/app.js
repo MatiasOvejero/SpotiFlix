@@ -36,6 +36,7 @@ function apiSearch(parameter) {
     .then((data) => {
       globalSpotify.dataApi = data;
       console.log(data);
+      reply.innerHTML = "";
 
       for (let i = 0; i < data.data.length; i++) {
         reply.innerHTML += ` <ul id="reply_ul">
@@ -47,8 +48,9 @@ function apiSearch(parameter) {
         <b id="reply_li_title">${data.data[i].title}</b> <br>
         <h3 id="reply_li_h3">${data.data[i].artist.name}
         - Album: ${data.data[i].album.title}</h3>
-        <button id="reply_li_button" <span class="fas fa-play"></span>Reproducir</button>
         </li>
+        <button id="reply_li_button" <span class="fas fa-play"></span>Reproducir</button>
+       
         `;
       }
       reply.innerHTML += `</ul>`;
@@ -104,7 +106,7 @@ butonSearch.addEventListener("click", function () {
   apiSearch(correctInput);
 });
 
-apiSearch("Luis%20Fonsi");
+// apiSearch("Luis%20Fonsi");
 
 // sidebar;
 $(".sidebar-list-main").click(function () {
