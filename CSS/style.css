@@ -390,7 +390,53 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
+
+/* search  */
+#reply{
+position: relative;
+display: block;
+}
+#reply_li{
+  padding-top:1%;
+  border-bottom: 1px solid #bbb;
+}
+
+#reply_li_title{
+  padding-top:1%;
+}
+#reply_img{
+
+  width: 100px;
+  margin-top: 0%;
+  margin-left: 17px;
+
+}
+#reply_name{
+  margin-top: -42px;
+  margin-left: 150px;
+  color: #fff;
+  margin-bottom: -18px;
+}
+  
+
+.fa-play{
+ margin-left: 600px;
+ padding-top: -50px;
+ padding-right: 30px;
+
+}
+#reply_li_button{
+  margin-left: 700px;
+  margin-bottom: 5opx;
+  border-radius: 22px;
+  padding: 10px 30px 10px 30px;
+}
+
+
+
 /*favorites sidebar*/
+
+
 
 #favorites {
   color: #e50914;
