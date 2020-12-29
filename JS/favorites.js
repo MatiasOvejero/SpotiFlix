@@ -3,6 +3,7 @@ let array1 = ["hola" , "chau" , "tuvieja"];
 const marker = document.getElementById("marker");
 const newFavorites = document.getElementById("newFavorites");
   
+
 marker.addEventListener("click", function () {
     newFavorites.innerHTML ="";
     for (let e = 0; e < array1.length; e++) {
@@ -11,5 +12,6 @@ marker.addEventListener("click", function () {
         `
         console.log(array1[e]);
     };
+
 });
 

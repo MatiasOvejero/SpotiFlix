@@ -393,9 +393,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 
 /* search  */
 
-#reply_li{
-  display:inline;
-  padding-top:1%;
   
   /* border-bottom: 1px solid #bbb; */
 }

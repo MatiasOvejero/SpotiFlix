@@ -11,7 +11,7 @@ const prev = document.getElementById("prev");
 const next = document.getElementById("next");
 
 favbuton.addEventListener("click", function () {
-  
+
   if (carouselExampleControls.style.display === "none") {
     carouselExampleControls.style.display === "block";
     prev.style.display === "block";
