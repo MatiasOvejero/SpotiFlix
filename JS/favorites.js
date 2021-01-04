@@ -3,12 +3,25 @@ let array1 = ["hola" , "chau" , "tuvieja"];
 const marker = document.getElementById("marker");
 const newFavorites = document.getElementById("newFavorites");
   
+
 marker.addEventListener("click", function () {
+    newFavorites.innerHTML ="";
     for (let e = 0; e < array1.length; e++) {
         newFavorites.innerHTML += `
         <li class="sidebar-list-tertiary juan"><a href="#"><span class="fa-angle-down" aria-hidden="false"></span>${array1[e]}</a></li>
         `
         console.log(array1[e]);
     };
+
 });
 
+library.addEventListener("click", function () {
+    if (newFavorites.classList.contains('hideFav')) {
+        newFavorites.classList.remove('hideFav');
+        newFavorites.classList.add('favList');
+    } else {
+        newFavorites.classList.remove('favList');
+        newFavorites.classList.add('hideFav');
+    }
+
+});
