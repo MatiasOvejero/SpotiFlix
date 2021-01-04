@@ -8,6 +8,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+#infoPlayer {
+  display: contents;
+}
 .player {
   position: relative;
   width: 500px;
@@ -22,10 +25,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   width: 60px;
   height: 50px;
 }
+.artist-title {
+  margin: 2% 5%;
+}
 .player .info {
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
   width: 50%;
   padding: 0 16px;
 }
