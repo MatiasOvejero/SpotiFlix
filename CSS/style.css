@@ -69,6 +69,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   position: fixed;
   z-index: 100;
 }
+.navbar-light .navbar-toggler-icon {
+  background-color: #e50914;
+  border-radius: 6px;
+}
 .iconfont {
   margin: 10px;
   font-family: iconfont !important;
