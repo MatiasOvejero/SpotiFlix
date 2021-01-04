@@ -7,7 +7,7 @@ background: linear-gradient(135deg,  #e50914 22%,#8f0222 58%); /* W3C, IE10+, FF
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', endColorstr='#8f0222',GradientType=1 ); /* IE6-9 fallback on horizontal gradient 
 }
 */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 .player {
   position: relative;
   width: 500px;
@@ -62,7 +62,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   src: url("//static0.qianqian.com/web/st/font/iconfont-4e6.woff")
     format("woff");
 }
-
+/*Styles Navbar*/
+#navPrin {
+  background-color: black !important;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
 .iconfont {
   margin: 10px;
   font-family: iconfont !important;
@@ -252,10 +258,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 }
 
 /* sidebar */
- .sidebar{
-  font-family: 'Roboto Condensed', sans-serif;
+.sidebar {
+  font-family: "Roboto Condensed", sans-serif;
   margin: 0;
- padding: 0;
+  padding: 0;
   user-select: none;
   box-sizing: border-box;
   position: fixed;
@@ -263,18 +269,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   height: 100%;
   left: 0;
   background: black;
-
 }
- .sidebar ul{
-  
+.sidebar ul {
   width: 100%;
   list-style: none;
-  } 
-.sidebar ul li{
+}
+.sidebar ul li {
   line-height: 50px;
-  border-bottom: 1px solid  #e50914;
-}  
-.sidebar ul li a{
+  border-bottom: 1px solid #e50914;
+}
+.sidebar ul li a {
   color: white;
   position: relative;
   text-decoration: none;
@@ -284,38 +288,36 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   display: block;
   width: 100%;
 }
-.sidebar ul li a:hover{
-  color:  #8d8c8d;
-  border-left-color:  #e50914;
+.sidebar ul li a:hover {
+  color: #8d8c8d;
+  border-left-color: #e50914;
   background: #282629;
-
 }
 .sidebar ul ul {
   position: static;
   display: none;
 }
-.sidebar ul .sidebar-list-secondary.secondary{
+.sidebar ul .sidebar-list-secondary.secondary {
   display: block;
 }
-.sidebar ul .sidebar-list-tertiary.tertiary{
+.sidebar ul .sidebar-list-tertiary.tertiary {
   display: block;
 }
 
 .juan {
-  display: block!important;
+  display: block !important;
 }
 
-
-.sidebar ul ul li{
+.sidebar ul ul li {
   line-height: 42px;
   border-bottom: none;
 }
-.sidebar ul ul li a{
+.sidebar ul ul li a {
   font-size: 17px;
-  color:  #8d8c8d;
+  color: #8d8c8d;
   padding-left: 80px;
 }
-.sidebar ul li a span{
+.sidebar ul li a span {
   position: absolute;
   top: 50%;
   right: 95px;
@@ -323,10 +325,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   transition: transform 0.4s;
   font-size: 22px;
 }
-.sidebar ul li a:hover span{
-  transform:  translateY(-50%)rotate(-180deg);
+.sidebar ul li a:hover span {
+  transform: translateY(-50%) rotate(-180deg);
 }
-.fa-arrow-alt-circle-down{
+.fa-arrow-alt-circle-down {
   position: absolute;
   top: 50%;
   right: 25px !important;
@@ -335,7 +337,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
-.fa-bookmark{
+.fa-bookmark {
   position: absolute;
   top: 50%;
   right: 25px !important;
@@ -344,7 +346,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
-.fa-stream{
+.fa-stream {
   position: absolute;
   top: 50%;
   right: 185px !important;
@@ -353,17 +355,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
-.fa-heart{
-  position: absolute;
-  top: 50%;
-  right: 185px !important;
-  transform: translateY(-50%);
-  transition: transform 0.4s;
-  font-size: 22px;
-  color: #e50914;
-   
-}
-.fa-sliders-h{
+.fa-heart {
   position: absolute;
   top: 50%;
   right: 185px !important;
@@ -372,7 +364,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
-.fa-sign-out-alt{
+.fa-sliders-h {
   position: absolute;
   top: 50%;
   right: 185px !important;
@@ -381,7 +373,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   font-size: 22px;
   color: #e50914;
 }
-.fa-user{
+.fa-sign-out-alt {
+  position: absolute;
+  top: 50%;
+  right: 185px !important;
+  transform: translateY(-50%);
+  transition: transform 0.4s;
+  font-size: 22px;
+  color: #e50914;
+}
+.fa-user {
   position: absolute;
   top: 50%;
   right: 185px !important;
@@ -456,6 +457,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   z-index: 999;
 }
 
-#controlIcon-container{
+#controlIcon-container {
   left: 20%;
 }

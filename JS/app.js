@@ -49,22 +49,7 @@ butonSearch.addEventListener("click", function () {
   apiSearch(correctInput);
 });
 
-apiSearch("Luis%20Fonsi");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+apiSearch("Reik");
 
 // sidebar
 $(".sidebar-list-main").click(function () {
