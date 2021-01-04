@@ -34,38 +34,29 @@ $(function () {
     console.log("holis");
   });
 
-
-
   aud.ontimeupdate = function () {
     $(".progress").css("width", (aud.currentTime / aud.duration) * 100 + "%");
   };
 
-  mutedOn.addEventListener("click", function(){
-    
-    if (aud.muted === false){
+  mutedOn.addEventListener("click", function () {
+    if (aud.muted === false) {
       aud.muted = true;
       muteButton.classList.add("filterInvert");
-    }
-    else{
+    } else {
       aud.muted = false;
       muteButton.classList.remove("filterInvert");
     }
-      
-  })
+  });
 
-  repeatOn.addEventListener("click", function(){
-    
-    if (aud.loop === false){
+  repeatOn.addEventListener("click", function () {
+    if (aud.loop === false) {
       aud.loop = true;
       repeatButton.classList.add("filterInvert");
-    }
-    else{
+    } else {
       aud.loop = false;
       repeatButton.classList.remove("filterInvert");
     }
-      
-  })
-  
+  });
 
   /*Este codigo esta escrito en JQuery, no lo hice yo, solo lo copie y modifique algunas cosas.
   Aca les voy a explicar mas o menos que significa cada cosa para que lo puedan leer lo mejor posible,
@@ -77,23 +68,15 @@ $(function () {
   sino, se la agrega. 
   esto hace que la estrellita negra aparezca y desaparezca segun el clik*/
 
-
-
   $(".favOn-favOff").on("click", function () {
-    let comparision = document.getElementsByClassName("fhide")
-    if (comparision && comparision.length>0) {
+    let comparision = document.getElementsByClassName("fhide");
+    if (comparision && comparision.length > 0) {
       $("#favoriteOn").removeClass("fhide");
       //$(".favOn-favOff").addClass("icon-favoriteblack");
     } else {
       $("#favoriteOn").addClass("fhide");
-     
     }
   });
 });
-
-
-
-
-
 
 //console.log(globalSpotify);

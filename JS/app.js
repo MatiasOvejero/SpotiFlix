@@ -124,7 +124,9 @@ butonSearch.addEventListener("click", function () {
   apiSearch(correctInput);
 });
 
-// apiSearch("Luis%20Fonsi");
+
+apiSearch("Reik");
+
 
 // sidebar;
 $(".sidebar-list-main").click(function () {
@@ -133,3 +135,14 @@ $(".sidebar-list-main").click(function () {
 $(".sidebar-list-playlist").click(function () {
   $("nav ul .sidebar-list-tertiary").toggleClass("tertiary");
 });
+
+const playerPermanent = document.getElementById("infoPlayer");
+playerPermanent.innerHTML = `
+          <div class="info">
+            <div><img id="img-player" src="./nota-musical.png"class="card-img-top" alt="..."/></div>
+            <div class = "artist-title">
+              <div class="name">Título</div>
+              <div class="singer">Artista</div>
+            </div>
+          `;
+playerPermanent.innerHTML += `</div>`;

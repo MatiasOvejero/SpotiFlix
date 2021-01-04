@@ -1,4 +1,5 @@
 "use strict";
+const player = document.getElementById("infoPlayer");
 
 let datapi;
 const card = document.getElementById("carouselExampleControls");
@@ -46,6 +47,14 @@ setTimeout(function () {
       if (document.getElementById("audio-id").paused) {
         document.getElementById("audio-id").src = datapi.data[i].preview;
         audio.play();
+        player.innerHTML = `
+          <div class="info">
+            <div><img id="img-player" src="${datapi.data[i].artist.picture_big}"class="card-img-top" alt="..."/></div>
+            <div class = "artist-title">
+              <div class="name">${datapi.data[i].title}</div>
+              <div class="singer">${datapi.data[i].artist.name}</div>
+            </div>
+          </div>`;
         $(".play-pause").removeClass("icon-play");
         $(".play-pause").addClass("icon-stop");
       } else {
@@ -56,3 +65,5 @@ setTimeout(function () {
     });
   }
 }, 3000);
+
+/*Informacion que se muestra en la baraa de reproduccion*/
