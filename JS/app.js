@@ -41,28 +41,25 @@ function apiSearch(parameter) {
 
       for (let i = 0; i < data.data.length; i++) {
         reply.innerHTML += ` <ul id="reply_ul">
-         <li id="reply_li"> <img
-          src="${data.data[i].artist.picture_medium}"
-          alt="..."
-         id="reply_img"/>
-         <div id= "reply_name">
-        <b id="reply_li_title">${data.data[i].title}</b> <br>
-        <h3 id="reply_li_h3">${data.data[i].artist.name}
-        - Album: ${data.data[i].album.title}</h3>
-        </li>
-        <button id="reply_li_button" <span class="fas fa-play"></span>Reproducir</button>
-        <div id="butContainer">
+         <li id="reply_li">
+        <div class="card" style="width: 10rem;">
+        <img class="card-img-top" src="${data.data[i].artist.picture_medium}" alt="Card image cap">
+        <div class="card-body">
+        <p class="card-text">${data.data[i].title} <br> ${data.data[i].artist.name}</p>
+        </div>
+        <button id="reply_li_button" <span class="fas fa-play" style="z-index=10006">
         <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000">
-        <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000>
-        </div>`;
+        <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000">
+        </div>
+        </li>
+        `;
       }
       butContainer = document.getElementById("butContainer");
       reply.innerHTML += `</ul>`;
     });
-
 } /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
 
-  /*butContainer && butContainer.addEventListener("click", function () {
+/*butContainer && butContainer.addEventListener("click", function () {
   buttonOf = document.getElementById("favoriteButton");
   buttonOn = document.getElementById("favoriteOn");
   
