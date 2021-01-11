@@ -10,6 +10,7 @@ setTimeout(function () {
   console.log(datapi);
 
   card.innerHTML = `<div class="carousel-inner">
+  
     `;
   datapi.data.forEach((e, index) => {
     card.innerHTML += `
@@ -30,10 +31,16 @@ setTimeout(function () {
                    
                   </div>
                 </div>
-              
-    `;
+     `;
   });
-  card.innerHTML += `</div>`;
+  card.innerHTML += `<a id="controlIcon-container" class="carousel-control-prev controls" href="#carouselExampleControls" role="button" data-slide="prev">
+  <span class="carousel-control-prev-icon" aria-hidden="true" style="z-index: 999;"></span>
+  <span class="sr-only">Previous</span>
+</a>
+<a class="carousel-control-next controls" href="#carouselExampleControls" role="button" data-slide="next" style=" z-index: 999;">
+  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  <span class="sr-only">Next</span>
+</a>  </div>`;
 }, 1000);
 
 /*Se realizó otro setTimeout para que la siguiente función cargue después de la anterior.
