@@ -49,20 +49,20 @@ function apiSearch(parameter) {
         <b id="reply_li_title">${data.data[i].title}</b> <br>
         <h3 id="reply_li_h3">${data.data[i].artist.name}
         - Album: ${data.data[i].album.title}</h3>
-        </li>
         <button id="reply_li_button" <span class="fas fa-play"></span>Reproducir</button>
         <div id="butContainer">
         <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000">
         <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000>
-        </div>`;
+        </div>
+        </li>
+       `;
       }
       butContainer = document.getElementById("butContainer");
       reply.innerHTML += `</ul>`;
     });
-
 } /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
 
-  /*butContainer && butContainer.addEventListener("click", function () {
+/*butContainer && butContainer.addEventListener("click", function () {
   buttonOf = document.getElementById("favoriteButton");
   buttonOn = document.getElementById("favoriteOn");
   
@@ -124,9 +124,7 @@ butonSearch.addEventListener("click", function () {
   apiSearch(correctInput);
 });
 
-
 apiSearch("Reik");
-
 
 // sidebar;
 $(".sidebar-list-main").click(function () {
