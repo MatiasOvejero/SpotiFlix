@@ -397,83 +397,82 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   color: #e50914;
 }
 
-/* search  */
-
-  
-  /* border-bottom: 1px solid #bbb; */
+ /* search   */
 
 #reply_ul{
  display: inline-flex;
-  
-  
 }
-
 #reply_li{
   margin-left: 60px;
   margin-top: 40px;
   margin-bottom: 20px;
   font-size: smaller;
-  text-align: -webkit-left;
   line-height: initial;
   padding: 0%;
-  
 }
 .card{
-  height: auto;
-  padding: 0% !important;
-  /* border-radius: 50% !important; */
-  background-color: rgb(38 32 46 / 13%) !important;
-  border: none !important; 
-  }
-  .card img{
-    border-radius: 50% !important;
-    border: 1px solid black !important;
+  height: 350px !important;
+  width: 250px !important;
+  background-color: rgb(19 19 20 / 28%) !important;
+  padding: 0 30px 0 40px;
+  border-radius: 3% !important;
   
-    /* background-color: black; */
   }
-  .card img:hover{
-    transform: scale(1.25);
-    transition: 1.3s;
-    opacity: 0.5 !important;
-  }
-  
 .card:hover{
-  transform: scale(1.05);
+  background-color: rgb(51 49 49) !important;
+  }
+.card img{
+  margin: 30px 10px 30px -20px;
+  border-radius: 50% !important;
+  border: 1px solid black !important;
+  width: 210px;
+  }
+.card:hover img{
+  transform: scale(1.15);
   transition: 1.3s;
-  box-shadow: 0 40px 60px -20px rgba(12, 5, 62, 0.15);
-  z-index: 100; 
-
-
- }
+  opacity: 0.8 !important;
+}
 .card-body{
   background-color:   rgb(38 32 46 / 13%) !important;
+  margin-top: -38px !important;
+}
+.card p{
+  color: #fff;
+  margin-block-start: 1em !important;
+  margin-block-end: 3em !important;
+  margin-inline-start: -30px !important;
+  margin-inline-end: -30px !important;
+}
+ .card h2{
+  color: #fff;
+  margin-top: -34px;
+  margin-inline-start: -30px !important; 
+  }
+
+.card-container-button{
+  margin: -101px 0px 100px 160px;
+  opacity: 0;
+}
+.card:hover .card-container-button{
+transform: translateY(-40px);
+opacity: 1 !important;
+transition: 0.8s;
 }
 #reply_li_button{
-  margin-bottom: 200px;
-  margin-top: -200px;
-  /* z-index: 3000; */
-/* visibility: hidden; */
-}
- #reply_li_button:hover{
-  visibility: visible;
+  border-radius: 50%;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  color: #e50914;
 }
 
 #favoriteButton{
-margin-top: 20px;
-display: none;
+  margin-left: 190px;
+ border: none !important;
+  margin-top: -710px;
 }
-#favoriteButton:hover{
-  display: block;
-}
-
-
-
-
-
 
 /*favorites sidebar*/
-
-
 
 #favorites {
   color: #e50914;
