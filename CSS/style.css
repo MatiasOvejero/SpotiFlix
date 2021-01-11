@@ -472,7 +472,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100%;
-  height: 600px;
+  height: 150%;
 
 }
 
@@ -495,7 +495,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
-  height: auto;
+  height: 166%;
 }
 
 #img-c {
@@ -517,4 +517,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e50914', end
 
 #controlIcon-container {
   left: 20%;
+}
+
+.noDisplay{
+  display: none;
+}
+
+.goDisplay{
+  display: contents;
+}
+
+#carContainer{
+  background-color: #e50914;
+  width: 100%;
+  height: 100%;
 }
