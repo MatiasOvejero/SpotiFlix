@@ -45,10 +45,10 @@ function apiSearch(parameter) {
 } /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
 
 function printData(data) {
-  reply.innerHTML = "";
+  reply.innerHTML = `<ul id="reply_ul">`;
 
   for (let i = 0; i < data.data.length; i++) {
-    reply.innerHTML += ` <ul id="reply_ul">
+    reply.innerHTML += ` 
         <li id="reply_li"> 
           <img
           src="${data.data[i].artist.picture_medium}"
@@ -60,16 +60,19 @@ function printData(data) {
           <h3 id="reply_li_h3">${data.data[i].artist.name}
           - Album: ${data.data[i].album.title}</h3>
         </li>
-        <button id="reply_li_button" 
+        <button id="reply_li_button" >
           <span class="fas fa-play"></span>Reproducir
         </button>
         <div id="butContainer">
           <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000">
           <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000>
-        </div>`;
+        </div>`; 
+    
   }
-  butContainer = document.getElementById("butContainer");
+  
   reply.innerHTML += `</ul>`;
+  butContainer = document.getElementById("butContainer");
+ 
   console.log(apiSearch);
 }
 
