@@ -417,37 +417,53 @@ body {
 
 /* border-bottom: 1px solid #bbb; */
 
+#reply{
+  padding: 68px 25px;
+}
+
+#reply_li{
+  display: flex;
+  gap: 20px;
+}
+.reply_card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reply_actions{
+  display: flex;
+  gap: 20px;
+}
+
 #reply_li_title {
   padding-top: 1%;
 }
 #reply_img {
   border-radius: 45px;
   width: 100px;
-  margin-top: 42%;
   margin-left: 17px;
 }
 #reply_name {
-  margin-top: -42px;
-  margin-left: 150px;
   color: #fff;
 }
 
-.fa-play {
-  margin-left: 600px;
-  padding-top: -50px;
-  padding-right: 30px;
-}
-#reply_li_button {
-  display: inline;
-  margin: 0px 20px 15px 700px;
-  border-radius: 22px;
-  background: transparent;
-}
+.reply_button {
+    border-radius: 7px;
+    width: 150px;
+    background: #a90614;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+ 
 #favoriteButton {
   width: 38px;
   height: 30px;
   padding: 0px 0px 6px 15px;
-  align-content: flex-end;
+  margin-left: -38px;
 }
 
 /*favorites sidebar*/
@@ -496,7 +512,6 @@ body {
   grid-column: 2 / -1;
   grid-row: 1 / 3;
   margin-left: -7%;
-  height: 166%;
 }
 
 #img-c {

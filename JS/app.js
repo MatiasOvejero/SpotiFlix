@@ -47,31 +47,40 @@ function apiSearch(parameter) {
 } /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
 
 function printData(data) {
-  reply.innerHTML = "";
+  reply.innerHTML = `<ul id="reply_ul">`;
 
   for (let i = 0; i < data.data.length; i++) {
-    reply.innerHTML += ` <ul id="reply_ul">
-        <li id="reply_li"> 
-          <img
-          src="${data.data[i].artist.picture_medium}"
-          alt="..."
-          id="reply_img"/>
-          <div id= "reply_name">
-          <b id="reply_li_title">${data.data[i].title}</b> 
-          <br>
-          <h3 id="reply_li_h3">${data.data[i].artist.name}
-          - Album: ${data.data[i].album.title}</h3>
-        </li>
-        <button id="reply_li_button" 
-          <span class="fas fa-play"></span>Reproducir
-        </button>
-        <div id="butContainer">
-          <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000">
-          <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000>
-        </div>`;
+    reply.innerHTML += ` 
+        <li class="reply_card">
+          <div id="reply_li"> 
+            <img
+            src="${data.data[i].artist.picture_medium}"
+            alt="..."
+            id="reply_img"/>
+            <div id="reply_name">
+              <b id="reply_li_title">${data.data[i].title}</b> 
+              <br>
+              <h3 id="reply_li_h3">${data.data[i].artist.name}
+              - Album: ${data.data[i].album.title}</h3>
+            </div>
+          </div>
+          <div class="reply_actions">
+            <div id="butContainer">
+              <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000"/>
+              <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000"/>
+            </div>
+            <button class="reply_button" >
+              <span class="fas fa-play"></span>Reproducir
+            </button>
+          </div>
+        </li>  
+          `; 
+    
   }
-  butContainer = document.getElementById("butContainer");
+  
   reply.innerHTML += `</ul>`;
+  butContainer = document.getElementById("butContainer");
+ 
   console.log(apiSearch);
 }
 
