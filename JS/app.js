@@ -27,6 +27,7 @@ favbuton.addEventListener("click", function () {
 function apiSearch(parameter) {
   const preloader = document.getElementById("preloader");
   preloader.style.display = "block";
+  reply.style.display="none";
   let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${parameter}`;
   fetch(url, {
     method: "GET",
@@ -40,6 +41,7 @@ function apiSearch(parameter) {
       globalSpotify.dataApi = data;
       console.log(data);
       if (data) {
+        reply.style.display = "block";
         preloader.style.display = "none";
         printData(data);
       }
