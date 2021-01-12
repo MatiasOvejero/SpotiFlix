@@ -25,6 +25,8 @@ favbuton.addEventListener("click", function () {
 });
 
 function apiSearch(parameter) {
+  const preloader = document.getElementById("preloader");
+  preloader.style.display = "block";
   let url = `https://deezerdevs-deezer.p.rapidapi.com/search?q=${parameter}`;
   fetch(url, {
     method: "GET",
@@ -38,10 +40,10 @@ function apiSearch(parameter) {
       globalSpotify.dataApi = data;
       console.log(data);
       if (data) {
+        preloader.style.display = "none";
         printData(data);
       }
     });
-  
 } /* hacer el boton favorito dentro del bucle con un indicador individual para cada imagen*/
 
 function printData(data) {

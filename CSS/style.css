@@ -110,8 +110,6 @@ body {
   padding: 0px 8px 4px 0px;
 }
 
-
-
 #favoriteOn {
   width: 38px;
   height: 30px;
@@ -444,7 +442,6 @@ body {
   margin: 0px 20px 15px 700px;
   border-radius: 22px;
   background: transparent;
- 
 }
 #favoriteButton {
   width: 38px;
@@ -523,16 +520,37 @@ body {
   left: 20%;
 }
 
-.noDisplay{
-  display: none;
+.noDisplay {
+  /*display: none;*/
 }
 
-.goDisplay{
+.goDisplay {
   display: contents;
 }
 
-#carContainer{
+#carContainer {
   background-color: #e50914;
   width: 100%;
   height: 100%;
+}
+#preloader {
+  display: none;
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid #666;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  margin: 35% 50%;
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
