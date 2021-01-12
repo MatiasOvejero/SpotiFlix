@@ -421,6 +421,22 @@ body {
   padding: 68px 25px;
 }
 
+#reply_li{
+  display: flex;
+  gap: 20px;
+}
+.reply_card{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reply_actions{
+  display: flex;
+  gap: 20px;
+}
+
 #reply_li_title {
   padding-top: 1%;
 }
@@ -430,12 +446,10 @@ body {
   margin-left: 17px;
 }
 #reply_name {
-  margin-top: -42px;
-  margin-left: 150px;
   color: #fff;
 }
 
-#reply_li_button {
+.reply_button {
     border-radius: 7px;
     width: 150px;
     background: #a90614;
