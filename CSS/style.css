@@ -106,7 +106,7 @@ body {
 #prevButton {
   width: 30px;
   height: 30px;
-  padding: 0px 8px 4px 0px;
+  margin: 0px 20px 0px 0px;
 }
 
 #favoriteOn {
