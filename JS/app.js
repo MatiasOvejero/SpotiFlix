@@ -67,9 +67,9 @@ function printData(data) {
             </div>
           </div>
           <div class="reply_actions">
-            <div id="butContainer">
-              <img src="../favorite.png" id="favoriteButton" class="favOn-favOff icon-favorite" style="z-index=10000"/>
-              <img src="../favoriteblack.png" id="favoriteOn" class="favOn-favOff fhide icon-favorite" style="z-index=10000"/>
+            <div id="butContainer${i}">
+              <img src="../favorite.png" id="favoriteButton${i}" class="favOn-favOff icon-favorite" style="z-index=10000"/>
+              <img src="../favoriteblack.png" id="favoriteOn${i}" class="favOn-favOff fhide icon-favorite" style="z-index=10000"/>
             </div>
             <button class="reply_button" >
               <span class="fas fa-play"></span>Reproducir
