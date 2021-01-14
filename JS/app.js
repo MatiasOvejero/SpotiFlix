@@ -52,6 +52,7 @@ function printData(data) {
   reply.innerHTML = `<ul id="reply_ul">`;
 
   for (let i = 0; i < data.data.length; i++) {
+    const starId = `favoriteButton${i}`;
     reply.innerHTML += ` 
         <li class="reply_card">
           <div id="reply_li"> 
